@@ -8,7 +8,7 @@ class SearchBox extends Component {
         className={`search-box ${this.props.className}`}
         type="search"
         placeholder={this.props.placeholder}
-        // onchange filters through robots
+        // onchange handler
         onChange={this.props.onChangeHandler}
       />
     )

@@ -1,16 +1,28 @@
 // import { Component } from 'react'
 import './search-box.css'
+import { ChangeEvent } from 'react';
+
+// typescript function
+type SearchBoxProps = {
+  className: string,
+  placeholder: string,
+  onChangeHandler: (event: ChangeEvent<HTMLInputElement>) => void;
+}
+
 
 // functional components
-const SearchBox = ({ className, placeholder, onChangeHandler }) => (
-  <input
-    className={`search-box ${className}`}
-    type="search"
-    placeholder={placeholder}
-    //         // onchange handler
-    onChange={onChangeHandler}
-  />
-)
+const SearchBox = ({ 
+  className, 
+  placeholder, 
+  onChangeHandler 
+}: SearchBoxProps) => (
+    <input
+      className={`search-box ${className}`}
+      type="search"
+      placeholder={placeholder}
+      onChange={onChangeHandler} 
+    />
+);
 
 export default SearchBox
 

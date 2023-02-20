@@ -1,9 +1,13 @@
 // import { Component } from 'react'
-
+import { Monster } from '../../App'
 import '../card/card.styles.css'
 
+
+type CardProps = {
+  monster: Monster;
+}
 // functional Components
-const Card = ({ monster }) => {
+const Card = ({ monster }: CardProps) => {
   const { id, email, name } = monster
 
   return (
